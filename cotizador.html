@@ -91,25 +91,231 @@
     </div>
 </header>
 
-<section id="hero" class="d-flex align-items-center">
-    <div class="bg"></div>
-    <!-- Background image 1 -->
-    <div class="bg"></div>
-    <!-- Background image 2 -->
-    <div class="bg"></div>
-    <!-- Background image 3 -->
-    <div class="bg"></div>
-    <!-- Background image 4 -->
-    <div class="container d-flex flex-row align-items-center justify-content-between" data-aos="fade-up">
-        <div class="text-container">
-            <h1>First concept,<br> then design.</h1>
-        </div>
-        <div class="logo-container">
-            <!-- Place your logo image here -->
-            <img src="assets/img/logo.png" class="img-fluid logo-img" alt="">
+<section id="cotice" class="d-flex align-items-center">
+    <div class="bgcotice">
+        <div class="text-containercoti">
+            <h1>Cotice<br>sin ningun<br>compromiso</h1>
         </div>
     </div>
 </section>
+
+<section class="Formulario">
+    <div class="container">
+        <form action="send_email.php" class="card login-form inner-content" method="post">
+            <div class="card-body">
+                <div class="input-head">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-user"></i></label>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Nombre" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-user"></i></label>
+                                <input class="form-control" id="apellido" name="apellido" type="text" placeholder="Apellidos" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-envelope"></i></label>
+                                <input class="form-control" id="reg-email" name="email" type="email" placeholder="Correo" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-phone"></i></label>
+                                <input class="form-control" id="phone" name="phone" type="number" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+                        <label><i class="lni lni-home"></i></label>
+                        <select class="form-control" id="propertyType" name="propertyType" required="">
+                                        <option disabled="" selected="" value="">
+                                            Seleccione el Tipo de Propiedad
+                                        </option>
+                                        <option value="Residencial">
+                                            Residencial
+                                        </option>
+                                        <option value="Comercial">
+                                            Comercial
+                                        </option>
+                                    </select>
+                    </div>
+                    <div class="form-group input-group">
+                        <label><i class="lni lni-shovel"></i></label>
+                        <select class="form-control" id="constructionType" name="constructionType" required="">
+                                        <option disabled="" selected="" value="">
+                                            Tipo de Construccion
+                                        </option>
+                                        <option value="Nueva">
+                                            Nueva
+                                        </option>
+                                        <option value="Remodelacion">
+                                            Remodelacion
+                                        </option>
+                                    </select>
+                    </div>
+                    <div class="form-group input-group">
+                        <label><i class="lni lni-ruler-pencil"></i></label>
+                        </label>
+                        <input class="form-control" id="squareMeters" name="squareMeters" placeholder="Cantidad de Metros Cuadrados (m²)" required="" type="number" />
+                    </div>
+                    <div class="form-group input-group">
+                        <label><i class="lni lni-paint-bucket"></i></label>
+                        <select class="form-control" id="acabados" name="acabados" required="">
+                                        <option disabled="" selected="" value="">
+                                            Tipo de Acabados
+                                        </option>
+                                        <option value="Basico">
+                                            Basico
+                                        </option>
+                                        <option value="Medio">
+                                            Medio
+                                        </option>
+                                        <option value="Premium">
+                                            Premium
+                                        </option>
+                                    </select>
+                    </div>
+                    <div class="form-group input-group">
+                        <label><i class="lni lni-dollar"></i></label>
+                        <select class="form-control" id="presupuesto" name="presupuesto" required="">
+                                        <option disabled="" selected="" value="">
+                                            Rango de Presupuesto
+                                        </option>
+                                        <option value="$0 - $50.000">
+                                            $0 - $50.000
+                                        </option>
+                                        <option value="$50.000 - $250.000">
+                                            $50.000 - $250.000
+                                        </option>
+                                        <option value="$250.000 - en adelante">
+                                            $250.000 - en adelante
+                                        </option>
+                                        <option value="No Especificar">
+                                            No Especificar
+                                        </option>
+                                    </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <label for="message_area">
+                                                <i class="lni lni-bubble"></i>
+                                            </label>
+                                <textarea class="form-control textarea-large" placeholder="Descripción del Proyecto" id="message_area" name="message_area" style="height: 200px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="button text-center mt-3">
+                    <button class="btn" type="submit">
+                                    Enviar
+                                </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<div style="justify-content: center;">El monto aproximado de su proyecto es de: $<span id="monto-estimado"></span></div>
+<div class="cost-header">
+    <div class="cost-item">Construccion: $<span id="construccion">0</span></div>
+    <div class="cost-item">Estudios Preliminares: $<span id="estudios">0</span></div>
+    <div class="cost-item">Anteproyecto: $<span id="anteproyecto">0</span></div>
+    <div class="cost-item">Planos Constructivos: $<span id="planos">0</span></div>
+    <div class="cost-item">Direccion Tecnica: $<span id="direccion"></span></div>
+</div>
+
+
+<!-- Amount Preview -->
+
+
+</div>
+</div>
+</div>
+
+
+
+<footer id="footer">
+    <div class="container d-flex align-items-center justify-content-between">
+        <div class="footer-text">
+            <p>SAN JOSE, COSTA RICA</p>
+            <p>+506-2222-0880/ +506-8975-0808</p>
+            <p>info@arquitectstudio.com</p>
+        </div>
+        <div class="footer-logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("propertyType").addEventListener("change", calcular);
+        document.getElementById("acabados").addEventListener("change", calcular);
+        document.getElementById("squareMeters").addEventListener("input", calcular);
+
+        calcular(); // Llamar al inicio para un cálculo inicial
+    });
+
+    function calcular() {
+        let tipoPropiedad = document.getElementById("propertyType").value;
+        let tipoAcabado = document.getElementById("acabados").value;
+        let metrosCuadrados = parseFloat(document.getElementById("squareMeters").value);
+
+        if (isNaN(metrosCuadrados)) {
+            metrosCuadrados = 0; // Establece a 0 si no es un número
+        }
+
+        let precioAcabado;
+
+        if (tipoPropiedad === "Residencial") {
+            switch (tipoAcabado) {
+                case "Basico":
+                    precioAcabado = 750;
+                    break;
+                case "Medio":
+                    precioAcabado = 900;
+                    break;
+                case "Premium":
+                    precioAcabado = 1200;
+                    break;
+            }
+        } else {
+            switch (tipoAcabado) {
+                case "Basico":
+                    precioAcabado = 900;
+                    break;
+                case "Medio":
+                    precioAcabado = 1000;
+                    break;
+                case "Premium":
+                    precioAcabado = 1200;
+                    break;
+            }
+        }
+
+        let construccion = precioAcabado * metrosCuadrados;
+        let estudios = construccion * 0.005;
+        let anteproyecto = construccion * 0.01;
+        let planos = construccion * 0.04;
+        let direccion = construccion * 0.05;
+        let total = construccion + estudios + anteproyecto + planos + direccion;
+
+        document.getElementById("construccion").textContent = isNaN(construccion) ? "0" : construccion.toFixed(2);
+        document.getElementById("estudios").textContent = isNaN(estudios) ? "0" : estudios.toFixed(2);
+        document.getElementById("anteproyecto").textContent = isNaN(anteproyecto) ? "0" : anteproyecto.toFixed(2);
+        document.getElementById("planos").textContent = isNaN(planos) ? "0" : planos.toFixed(2);
+        document.getElementById("direccion").textContent = isNaN(direccion) ? "0" : direccion.toFixed(2);
+        document.getElementById("monto-estimado").textContent = isNaN(total) ? "0" : total.toFixed(2);
+
+    }
+</script>
