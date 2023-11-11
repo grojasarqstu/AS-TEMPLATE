@@ -122,24 +122,89 @@ h6 {
     border-bottom: 2px solid #A7BB00;
     transition: all 0.5s;
     z-index: 997;
-    padding: 12px 0;
+    padding: 4px 0;
+    /* Adjust the top and bottom padding */
     position: relative;
-    /* Added relative positioning for the header */
+    height: 100px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    /* Adjust the left padding */
+    padding-right: 30px;
+    /* Adjust the right padding */
+    height: 100px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right-section {
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.right-section ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    text-align: left;
+}
+
+.right-section li {
+    margin-left: 20px;
+    /* Adjust the spacing between icons */
+}
+
+.right-section a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #eceefe;
+    transition: 0.3s;
+}
+
+.right-section img {
+    max-height: 24px;
+    /* Adjust the size of the icon */
+    filter: invert(1);
+}
+
+.right-section ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /* Adjust the width to your desired size */
+    height: 40px;
+    /* Adjust the height to your desired size */
+}
+
+.left-section {
+    flex-grow: 0;
+    padding-top: 10px;
+}
+
+.center-section {
+    text-align: center;
 }
 
 #header .logo img {
-    position: absolute;
-    /* Added absolute positioning for the image */
-    top: 50%;
-    /* Center it vertically */
-    left: 0;
-    /* Align it to the left */
     max-height: 150px;
     /* Your desired height */
-    transform: translateY(-50%);
-    /* Adjust for exact vertical centering */
     vertical-align: middle;
+    filter: brightness(0) invert(1);
     /* Align the image vertically */
+}
+
+.white-icon {
+    filter: invert(1);
 }
 
 
@@ -154,18 +219,20 @@ h6 {
 
 .navbar {
     padding: 0;
+    text-align: left;
 }
 
 .navbar ul {
-    margin: 0;
-    padding: 0;
+    margin: 10;
     display: flex;
     list-style: none;
     align-items: center;
+    height: 50px;
 }
 
 .navbar li {
     position: relative;
+    height: 40px;
 }
 
 .navbar a,
@@ -200,11 +267,11 @@ h6 {
 .navbar .getstarted:focus {
     background: #A7BB00;
     padding: 9px 25px;
-    margin-left: 30px;
+    margin-left: auto;
+    /* Push to the right */
     border-radius: 5px;
     font-weight: 600;
     color: #fff;
-    color: #f1f1f1;
 }
 
 .navbar .getstarted:hover,
@@ -229,53 +296,8 @@ h6 {
     border-radius: 4px;
 }
 
-.navbar .dropdown ul li {
-    min-width: 200px;
-}
 
-.navbar .dropdown ul a {
-    padding: 10px 20px;
-    text-transform: none;
-    font-weight: 500;
-}
-
-.navbar .dropdown ul a i {
-    font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-    color: #A7BB00;
-}
-
-.navbar .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
-}
-
-@media (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
-        left: -90%;
-    }
-    .navbar .dropdown .dropdown:hover>ul {
-        left: -100%;
-    }
-}
+/* ... (rest of your existing styles) */
 
 
 /**
