@@ -473,54 +473,11 @@
                 width: 100%;
                 height: 100%;
                 background-size: cover;
-                /* Make background cover the container */
                 animation: fade 12s infinite;
-                opacity: 0;
-                z-index: -1;
-                /* Make sure the background is below the content */
-            }
-            
-            #cotice {
-                position: relative;
-                height: 100vh;
-                /* Adjust the height as needed */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                /* Center the text horizontally */
-                border-top: 100px;
-            }
-            
-            .bgcotice {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-size: cover;
-                background-image: url('../img/cotice.png');
-                /* Replace with your background image */
+                opacity: 800; /* Adjust the opacity to your preference */
                 z-index: -1;
             }
             
-            .text-containercoti {
-                z-index: 80;
-            }
-            
-            .text-containercoti h1 {
-                color: #fff;
-                /* Set the text color */
-                font-size: 80px;
-                padding-left: 30px;
-                /* Adjust the font size */
-                margin: 0;
-                /* Remove default margin */
-                line-height: 1.5;
-                padding-top: 300px;
-                text-align: left;
-                /* Adjust line height as needed */
-            }
             
             .container #hero .bg::before {
                 content: "";
@@ -529,7 +486,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
+                background: rgba(0, 0, 0, 0.876);
                 /* This will darken your background */
                 z-index: 1;
                 /* Make sure the overlay is above the background */
@@ -633,6 +590,145 @@
             .logo-img {
                 max-width: 100%;
             }
+
+            #hero-portfolio {
+                position: relative;
+                width: 100%;
+                height: 50vh; /* Adjust the height as needed for the desired aspect ratio */
+            }
+            
+            .bg-portfolio {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center center; /* Center the background image */
+                /* Add your background image path below */
+                background-image: url('../img/portfolio-header.png');
+            }
+            
+            
+/* Your current CSS */
+
+/* Your existing CSS */
+
+#portfolio-page {
+    position: relative;
+    width: 100%;
+}
+
+.container.portfolio.page {
+    padding: 20px 5px; /* Adjust padding to reduce side margin */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Set a maximum width for the container */
+}
+
+.row.no-gutters.portfolio-page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content.col-xl-5 {
+    order: 1; /* Adjust order to place the image on the left */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.col-xl-7 {
+    order: 2; /* Adjust order to place the text and images on the right */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.left-image {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 5px;
+}
+
+.right-content {
+    text-align: left;
+}
+
+.right-content h3 {
+    font-size: 48px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold; /* Make the header bold */
+}
+
+.right-content p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: italic; /* Make the paragraph bold */
+}
+
+#images-section {
+    padding-left: 5px; /* Adjust left padding as needed */
+    padding-right: 5px; /* Adjust right padding as needed */
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-image-container {
+    width: calc(25% - 10px);
+    margin: 0 2px 2px 2px; /* Adjust the margin for less spacing */
+}
+
+.service-image {
+    width: 100%;
+    height: 300px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .content.col-xl-5,
+    .col-xl-7 {
+        order: initial;
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    .image-container {
+        justify-content: space-around;
+    }
+
+    .service-image-container {
+        width: calc(50% - 10px);
+    }
+}
+
+
+            /*--------------------------------------------------------------
+# parragraph-1
+--------------------------------------------------------------*/
+
+#justified-text-container {
+    text-align: center;
+    padding: 20px 10px; /* Adjust the bottom padding as needed */
+}
+
+#justified-text {
+    display: inline-block;
+    text-align: justify;
+    font-weight: bold;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#justified-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+
             /*--------------------------------------------------------------
 # counter
 --------------------------------------------------------------*/
@@ -1345,3 +1441,46 @@
                 font-family: 'Inter', sans-serif;
                 font-weight: 700;
             }
+
+            #cotice {
+                position: relative;
+                height: 100vh;
+                /* Adjust the height as needed */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                /* Center the text horizontally */
+                border-top: 100px;
+            }
+            
+            .bgcotice {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-image: url('../img/cotice.png');
+                /* Replace with your background image */
+                z-index: -1;
+            }
+            
+            .text-containercoti {
+                z-index: 80;
+            }
+            
+            .text-containercoti h1 {
+                color: #fff;
+                /* Set the text color */
+                font-size: 80px;
+                padding-left: 30px;
+                /* Adjust the font size */
+                margin: 0;
+                /* Remove default margin */
+                line-height: 1.5;
+                padding-top: 300px;
+                text-align: left;
+                /* Adjust line height as needed */
+            }
+            
