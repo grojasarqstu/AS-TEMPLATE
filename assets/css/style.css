@@ -1345,3 +1345,49 @@
                 font-family: 'Inter', sans-serif;
                 font-weight: 700;
             }
+            /* Add this section to your existing CSS file or create a new one */
+            
+            .Formulario {
+                padding: 40px 0;
+                background-color: #f8f9fa;
+            }
+            
+            .card-body {
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+            }
+            
+            .input-head {
+                margin-bottom: 30px;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group label {
+                font-size: 20px;
+                color: #343a40;
+                margin-right: 10px;
+            }
+            
+            .form-control {
+                height: 50px;
+                font-size: 16px;
+            }
+            
+            .button {
+                margin-top: 20px;
+            }
+            
+            .btn {
+                background-color: #A7BB00;
+                color: #ca1c1c;
+                font-size: 18px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
