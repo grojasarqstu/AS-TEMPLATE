@@ -101,7 +101,7 @@
 
 <section class="Formulario">
     <div class="container">
-        <form action="send_email.php" class="card login-form inner-content" method="post">
+        <form action="send_email.php" method="post" role="form" class="php-email-form">
             <div class="card-body">
                 <div class="input-head">
                     <div class="row">
@@ -130,11 +130,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group input-group">
-                        <label><i class="lni lni-home"></i></label>
-                        <select class="form-control" id="propertyType" name="propertyType" required="">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-home"></i></label>
+                                <select class="form-control" id="propertyType" name="propertyType" required="">
+                                
                                         <option disabled="" selected="" value="">
-                                            Seleccione el Tipo de Propiedad
+                                            Tipo de Propiedad
                                         </option>
                                         <option value="Residencial">
                                             Residencial
@@ -143,10 +146,12 @@
                                             Comercial
                                         </option>
                                     </select>
-                    </div>
-                    <div class="form-group input-group">
-                        <label><i class="lni lni-shovel"></i></label>
-                        <select class="form-control" id="constructionType" name="constructionType" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-shovel"></i></label>
+                                <select class="form-control" id="constructionType" name="constructionType" required="">
                                         <option disabled="" selected="" value="">
                                             Tipo de Construccion
                                         </option>
@@ -157,15 +162,18 @@
                                             Remodelacion
                                         </option>
                                     </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group input-group">
                         <label><i class="lni lni-ruler-pencil"></i></label>
-                        </label>
                         <input class="form-control" id="squareMeters" name="squareMeters" placeholder="Cantidad de Metros Cuadrados (m²)" required="" type="number" />
                     </div>
-                    <div class="form-group input-group">
-                        <label><i class="lni lni-paint-bucket"></i></label>
-                        <select class="form-control" id="acabados" name="acabados" required="">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-home"></i></label>
+                                <select class="form-control" id="acabados" name="acabados" required="">
                                         <option disabled="" selected="" value="">
                                             Tipo de Acabados
                                         </option>
@@ -179,10 +187,12 @@
                                             Premium
                                         </option>
                                     </select>
-                    </div>
-                    <div class="form-group input-group">
-                        <label><i class="lni lni-dollar"></i></label>
-                        <select class="form-control" id="presupuesto" name="presupuesto" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group input-group">
+                                <label><i class="lni lni-dollar"></i></label>
+                                <select class="form-control" id="presupuesto" name="presupuesto" required="">
                                         <option disabled="" selected="" value="">
                                             Rango de Presupuesto
                                         </option>
@@ -199,9 +209,11 @@
                                             No Especificar
                                         </option>
                                     </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 mb-3">
+                        <div class="col-lg-12 col-12">
                             <div class="form-group">
                                 <label for="message_area">
                                                 <i class="lni lni-bubble"></i>
@@ -222,7 +234,7 @@
         </form>
     </div>
 </section>
-<div style="justify-content: center;">El monto aproximado de su proyecto es de: $<span id="monto-estimado"></span></div>
+<div style="justify-content: center">El monto aproximado de su proyecto es de: $<span id="monto-estimado"></span></div>
 <div class="cost-header">
     <div class="cost-item">Construccion: $<span id="construccion">0</span></div>
     <div class="cost-item">Estudios Preliminares: $<span id="estudios">0</span></div>
