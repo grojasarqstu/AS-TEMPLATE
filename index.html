@@ -208,10 +208,6 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
                         </ul>
                     </div>
                 </div>
@@ -343,11 +339,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-bottom">
+                    <a href="inner-page.html" class="rounded-button bigger-button">Ir a portafolio completo</a>
                 </div>
 
-            </div>
         </section>
+
+
         <!-- End Portfolio Section -->
 
 
@@ -450,54 +452,87 @@
         document.addEventListener("DOMContentLoaded", function() {
             const expandableTitles = document.querySelectorAll('.expandable-title');
             const image = document.getElementById('image');
-
+    
             expandableTitles.forEach(title => {
                 title.addEventListener('click', function() {
                     const content = this.nextElementSibling;
                     content.style.display = content.style.display === 'block' ? 'none' : 'block';
-
-                    // Change image when text is expanded
+    
+                    // Change image with a shorter fading effect when text is expanded
                     if (content.style.display === 'block') {
-                        image.style.opacity = 0;
-                        setTimeout(() => {
+                        fadeOutImage(image, 200, function() {
                             image.src = 'assets/img/serv2.png'; // Replace with the new image URL
-                            image.style.opacity = 1;
-                        }, 1000);
+                            fadeInImage(image, 200);
+                        });
                     } else {
-                        image.style.opacity = 0;
-                        setTimeout(() => {
+                        fadeOutImage(image, 200, function() {
                             image.src = 'assets/img/serv1.jpg'; // Replace with the original image URL
-                            image.style.opacity = 1;
-                        }, 1000);
+                            fadeInImage(image, 200);
+                        });
                     }
                 });
             });
+    
+            function fadeOutImage(imgElement, duration, callback) {
+                imgElement.style.transition = `opacity ${duration}ms ease-out`;
+                imgElement.style.opacity = 0;
+                imgElement.addEventListener('transitionend', function() {
+                    imgElement.style.transition = ''; // Reset transition property
+                    if (callback) {
+                        callback();
+                    }
+                });
+            }
+    
+            function fadeInImage(imgElement, duration) {
+                imgElement.style.transition = `opacity ${duration}ms ease-in`;
+                imgElement.style.opacity = 1;
+            }
         });
     </script>
-
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const services = document.querySelectorAll('.service');
             const image = document.getElementById('image');
             const overlay = document.getElementById('overlay');
-
+    
             services.forEach(service => {
                 service.addEventListener('mouseover', function() {
                     const imgSrc = this.getAttribute('data-image');
                     const desc = this.getAttribute('data-desc');
-
-                    image.src = imgSrc;
+    
+                    fadeOutImage(image, 200, function() {
+                        image.src = imgSrc;
+                        fadeInImage(image, 200);
+                    });
+    
                     overlay.textContent = desc;
                     overlay.style.opacity = 1;
                 });
-
+    
                 service.addEventListener('mouseout', function() {
                     overlay.style.opacity = 0;
                 });
             });
+    
+            function fadeOutImage(imgElement, duration, callback) {
+                imgElement.style.transition = `opacity ${duration}ms ease-out`;
+                imgElement.style.opacity = 0;
+                imgElement.addEventListener('transitionend', function() {
+                    imgElement.style.transition = ''; // Reset transition property
+                    if (callback) {
+                        callback();
+                    }
+                });
+            }
+    
+            function fadeInImage(imgElement, duration) {
+                imgElement.style.transition = `opacity ${duration}ms ease-in`;
+                imgElement.style.opacity = 1;
+            }
         });
     </script>
-
 
 </body>
 

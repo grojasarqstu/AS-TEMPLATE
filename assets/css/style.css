@@ -620,9 +620,9 @@
 }
 
 .container.portfolio.page {
-    padding: 20px 5px; /* Adjust padding to reduce side margin */
-    margin: 0 auto; /* Center the container */
-    max-width: 1200px; /* Set a maximum width for the container */
+    padding: 20px 5px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .row.no-gutters.portfolio-page {
@@ -631,13 +631,13 @@
 }
 
 .content.col-xl-5 {
-    order: 1; /* Adjust order to place the image on the left */
-    padding: 10px; /* Adjust padding as needed */
+    order: 1;
+    padding: 10px;
 }
 
 .col-xl-7 {
-    order: 2; /* Adjust order to place the text and images on the right */
-    padding: 10px; /* Adjust padding as needed */
+    order: 2;
+    padding: 10px;
 }
 
 .left-image {
@@ -654,19 +654,19 @@
     font-size: 48px;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
-    font-weight: bold; /* Make the header bold */
+    font-weight: bold;
 }
 
 .right-content p {
     font-size: 16px;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
-    font-weight: italic; /* Make the paragraph bold */
+    font-weight: italic;
 }
 
 #images-section {
-    padding-left: 5px; /* Adjust left padding as needed */
-    padding-right: 5px; /* Adjust right padding as needed */
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .image-container {
@@ -677,7 +677,7 @@
 
 .service-image-container {
     width: calc(25% - 10px);
-    margin: 0 2px 2px 2px; /* Adjust the margin for less spacing */
+    margin: 0 2px 2px 2px;
 }
 
 .service-image {
@@ -685,12 +685,11 @@
     height: 300px;
 }
 
-/* Responsive styles */
 @media (max-width: 992px) {
     .content.col-xl-5,
     .col-xl-7 {
         order: initial;
-        padding: 10px; /* Adjust padding as needed */
+        padding: 10px;
     }
 
     .image-container {
@@ -701,6 +700,7 @@
         width: calc(50% - 10px);
     }
 }
+
 
 
             /*--------------------------------------------------------------
@@ -773,6 +773,7 @@
                 font-weight: 700;
                 color: #A7BB00;
                 margin-right: 10px;
+                padding-bottom: 30px;
             }
             
             .counter-text {
@@ -782,6 +783,7 @@
                 font-weight: 100;
                 /* Thinner font */
                 text-align: center;
+                padding-bottom: 30px;
             }
             /* Responsive styles */
             
@@ -893,43 +895,54 @@
 # Sections General
 --------------------------------------------------------------*/
             
-            section {
-                padding: 60px 0;
-                overflow: hidden;
-            }
-            
-            .section-bg {
-                background-color: #f6f8fb;
-            }
-            
-            .section-title {
-                text-align: center;
-                padding-bottom: 30px;
-            }
-            
-            .section-title h2 {
-                font-size: 72px;
-                font-weight: bold;
-                margin-bottom: 20px;
-                padding-bottom: 20px;
-                position: relative;
-                color: #222222;
-            }
-            
-            .section-title h2::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 50px;
-                height: 3px;
-                background: #d9ff0000;
-                bottom: 0;
-                left: calc(50% - 25px);
-            }
-            
-            .section-title p {
-                margin-bottom: 0;
-            }
+#global-section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+#global-section .section-bg {
+    background-color: #f6f8fb;
+}
+
+#global-section .section-title {
+    text-align: center;
+    padding-bottom: 300px;
+    padding-bottom: 300px;
+}
+
+#global-section .section-title h2 {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #222222;
+}
+
+#global-section .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #d9ff0000;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+#global-section .section-title p {
+    margin-bottom: 0;
+}
+
+#new-section {
+    /* Your specific styling for new-section */
+    padding: 100px 0; /* Adjust padding as needed */
+    /* Add any other specific styling for new-section */
+}
+
+/* Add any additional styling for new-section elements if needed */
+
+
             /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -950,6 +963,7 @@
                 /* Set the font to Quicksand */
                 margin-bottom: 30px;
                 /* Added more padding between the title and the text under it */
+                font-size: 48px;
             }
             
             .content {
@@ -1114,7 +1128,10 @@
             /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-            
+.portfolio {
+    background-color: #f1f1f1; /* Replace with your desired light grey color */
+}            
+
             .portfolio .portfolio-item {
                 margin-bottom: 30px;
             }
@@ -1234,6 +1251,48 @@
             .portfolio .portfolio-wrap:hover .portfolio-info {
                 opacity: 1;
             }
+
+            #portfolio .section-title h2 {
+                text-align: center;
+                font-weight: bold;
+                font-family: 'Inter', sans-serif;
+                font-size: 72px;
+                padding-top: 20px;
+            }
+
+            #portfolio .section-title h2 {
+                text-align: center;
+                font-weight: bold;
+                font-family: 'Inter', sans-serif;
+                font-size: 72px;
+                padding-top: 20px;
+            }
+            
+            #portfolio .rounded-button {
+                background-color: gray;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                padding: 15px 30px; /* Larger padding for a bigger button */
+                font-family: 'Inter', sans-serif;
+                text-decoration: none; /* Remove default link underline */
+                cursor: pointer;
+                margin-top: 10px;
+                margin-bottom: 35px;
+                display: inline-block; /* Ensures the link behaves like a block element */
+            }
+            
+            #portfolio .rounded-button:hover {
+                background-color: darkgray; /* Darker gray color on hover, adjust as needed */
+            }
+            
+            #portfolio .bigger-button {
+                font-size: 18px; /* Adjust font size as needed */
+            }
+            
+            
+            
+            
             /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
