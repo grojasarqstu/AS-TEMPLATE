@@ -189,6 +189,12 @@
                 /* Set your desired button text color */
             }
             
+            .cost-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .cost-header {
                 display: flex;
                 justify-content: space-between;
@@ -1209,26 +1215,36 @@
             
             #footer {
                 background: #A7BB00;
-                /* Same green background as navbar */
                 color: #ffffff;
-                /* White text */
                 font-family: "Inter", sans-serif;
-                /* Inter font */
-                padding: 10px 0;
-                /* Reduced padding */
+            }
+            
+            .footer-logo {
+                width: 40%;
             }
             
             .footer-text {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: center;
+                /* Center the text on smaller screens */
             }
             
             .footer-text p {
-                margin: 0;
-                padding: 0;
+                margin: 5px 0;
+                /* Add some space between each paragraph */
                 font-size: 16px;
-                /* Adjust as needed */
+            }
+            /* Media query for smaller screens */
+            
+            @media (max-width: 768px) {
+                .footer-logo {
+                    display: none;
+                    /* Hide the footer logo on screens 768px and below */
+                }
+                .footer-text {
+                    align-items: flex-start;
+                }
             }
             
             .social-icons {
@@ -1241,7 +1257,8 @@
             }
             
             .footer-logo img {
-                max-height: 300px;
+                max-height: 200px;
+                width: 300px;
                 /* Adjust as needed */
                 filter: brightness(0) invert(2);
                 /* Same green background as navbar */
@@ -1390,4 +1407,56 @@
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
+            }
+            /* Responsive styles */
+            
+            @media (max-width: 768px) {
+                .card-body {
+                    padding: 20px;
+                }
+                .form-control {
+                    height: 40px;
+                    font-size: 14px;
+                }
+                .btn {
+                    padding: 8px 16px;
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .form-group label {
+                    font-size: 18px;
+                }
+                .btn {
+                    font-size: 16px;
+                }
+            }
+            /* Default styles */
+            
+            .text-containercoti {
+                text-align: center;
+            }
+            
+            .text-containercoti h1 {
+                font-size: 5em;
+                line-height: 1.2;
+                margin: 0;
+            }
+            /* Media query for smaller screens */
+            
+            @media (max-width: 768px) {
+                .text-containercoti h1 {
+                    font-size: 1.1em;
+                }
+            }
+            /* Media query for even smaller screens */
+            
+            @media (max-width: 480px) {
+                .text-containercoti h1 {
+                    font-size: 3em;
+                }
+            }
+            
+            .estimate {
+                text-size-adjust: 100px;
             }
